@@ -25,7 +25,7 @@ function createGraph(data) {
 	var mve_PREDICT = [];
 	var pressure_PREDICT = [];
 
-	var amountPointsInPlot = 20
+	var amountPointsInPlot = 50
 	var time_latest = -1
     var index_latest = -1
 	for (var i = 1; i < data.length; i++) {

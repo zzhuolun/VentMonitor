@@ -25,7 +25,7 @@ function createGraph(data) {
 	var mve_PREDICT = [];
 	var pressure_PREDICT = [];
 
-	var amountPointsInPlot = 20
+	var amountPointsInPlot = 50
 	var time_latest = -1
     var index_latest = -1
 	for (var i = 1; i < data.length; i++) {
@@ -89,7 +89,7 @@ function createGraph(data) {
 	// predict the time
 	//console.log(Number(time_latest));
     
-	for (var i = 1; i <= 5; i++) {
+	for (var i = 0; i <= 5; i++) {
 
         let unix_timestamp = Number(time_latest) + i;
         var date = new Date(unix_timestamp * 1000);
@@ -122,11 +122,6 @@ function createGraph(data) {
 	var ctx = document.getElementById('myChart').getContext('2d');
 	var config = {
         type : 'line',
-		axis : {
-			x : {
-				type : 'timeseries',
-			}
-		},
 		data : {
 			labels : time,
 			datasets : [ {
@@ -151,7 +146,7 @@ function createGraph(data) {
             {
 				label : 'ExpiredO2_pred',
 				data : ExpiredO2_PREDICT,
-				borderColor : window.chartColors.orange,
+				borderColor : window.chartColors.purple,
 				yAxisID : 'y-axis-2',
 			},
             ]
