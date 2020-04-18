@@ -94,11 +94,12 @@ def check_and_add_data():
             pass
 
 ### LOOP
-try:
-    while True:
-        check_and_add_data()
-        time.sleep(timedelay)
-except KeyboardInterrupt:
-    print('Manual break by user')
-except:
-    print('Other thing went wrong ... stopping!')
+while True:
+    try:
+            check_and_add_data()
+            time.sleep(timedelay)
+    except KeyboardInterrupt:
+        print('Manual break by user')
+    except Exception as e:
+        print(e)
+        print('Other thing went wrong ... stopping!')
