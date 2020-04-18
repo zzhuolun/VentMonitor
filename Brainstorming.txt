@@ -1,0 +1,74 @@
+1. visualize dataset
+2. monitoring patient
+   -> RNN/LSTM (trend prediction)
+   -> Sequential/Full Baysian
+   -> preproccessing: Denoise data
+   -> Chi_squared-test
+   
+3. Questions about monotoring with ventilation systems:
+   -> What kind of parameters are you looking at when monitoring a person?
+   -> Which parameters determine the safety of the patient
+   -> What are the limits (upper/lower bound) of the parameters?
+   -> What are the normal values of the parameters?
+   -> What is the maximum duration of a certain value?
+   -> What are the meaning of the parameters?
+      mve, RR, VT, PEEP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ventilation: 
+It is the process of moving air in and out of the lungs. 
+Its most important effect is the removal of carbon dioxide (CO2) 
+from the body, not on increasing blood oxygen content.
+
+
+RR: respiratory rate -> number of breaths you take per minut (bpm)
+                     -> depends on age and on activity (>= 12years: 12-16 bpm)
+VT: tidal volume     -> amount of air inhaled/exhaled in each breath (during rest)
+                     -> long protective ventilation strategy: 6-8 mL/kg body weight
+
+Minute Ventilation = TV * RR
+
+
+
+Lung protective ventilation strategy, namely low tidal volume (6-8ml/kg of ideal body weight) 
+and low level of airway platform pressure (<30cmH 2 O) should be used to perform mechanical 
+ventilation to reduce ventilator-related lung injury. 
+
+PEEP: positive end-expiratory pressure
+The positive pressure that will remain in the airways at the end of the respiratory cycle
+-> high PEEP can be used to keep the airway warm and moist
+
+Lung-protective ventilation principles using more physiological tidal volumes, 
+avoiding high inspiratory plateau pressures, along with appropriate levels of 
+positive end-expiratory pressure have been shown to decrease pulmonary complications 
+and improve outcomes in patients with acute respiratory distress syndrome 
+requiring ongoing ventilatory support in the ICU
+
+
+3. Treatment of severe and critical cases 
+3.1 Treatment principle: ....
+3.2 Respiratory support:   
+3.2.1 Oxygen therapy: .....
+3.2.2 High-flow nasal-catheter oxygenation .....
+3.2.3 Invasive mechanical ventilation: Lung protective ventilation strategy, namely low 
+tidal volume (6-8ml/kg of ideal body weight) and low level of airway platform pressure 
+(<30cmH 2 O) should be used to perform mechanical ventilation to reduce ventilator-related 
+lung injury. While the airway platform pressure maintained  ≤30cmH 2 O, high PEEP can 
+be used to keep the airway warm and moist; avoid long sedation and wake the patient early 
+for  lung  rehabilitation.  There  are  many  cases  of  human-machine  asynchronization, 
+therefore sedation and muscle relaxants should be used in a timely manner. Use closed 
+sputum  suction  according  to  the  airway  secretion,  if  necessary,  administer  appropriate 
+treatment based on bronchoscopy findings.   
