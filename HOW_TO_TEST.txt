@@ -1,0 +1,5 @@
+1. open cmd
+2. cd to folder
+3. python -m http.server 8000
+4. http://127.0.0.1:8000/
+5. open the html-file
