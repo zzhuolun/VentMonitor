@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>TUM hospital</title>
+		<style>html {
+  background: #787878;
+  /* Old browsers */
+  background: radial-gradient(ellipse at center, #454545 0%, #787878 100%);
+  background-size: cover;
+  height: 100%;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+body {
+  width: 90%;
+  width: 90vw;
+  margin: 1vh auto;
+  color: black; }
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #FFF; }
+
+.elements {
+  font-size: 10px; }
+  @media screen and (min-width: 600px) {
+    .elements {
+      font-size: calc(10px + 8 * ((100vw - 600px) / 1320)); } }
+  @media screen and (min-width: 1920px) {
+    .elements {
+      font-size: 18px; } }
+
+.element {
+  display: none; }
+
+.key {
+  display: none; }
+
+@media screen and (min-width: 600px) {
+  .row {
+    display: flex;
+    text-align: center;
+    height: 6vmin;
+    justify-content: space-around; }
+  .f-block .row {
+    justify-content: flex-end; }
+  .element {
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    flex: 6vw 0 0;
+    color: black;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin: 1px;
+    text-decoration: none; }
+  .description {
+    display: none; }
+  .description:target {
+    display: block; }
+  .key {
+    display: block;
+    padding: 0;
+    width: 60%;
+    max-width: 650px;
+    list-style-type: none;
+    color: #fff;
+    line-height: 1.8;
+    font-weight: normal; }
+  .key li {
+    display: inline-block;
+    margin: 0 .2rem;
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer; }
+  .key li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 16px;
+    height: 16px; } }
+
+.description {
+  padding: 1em;
+  margin: 2em 0;
+  text-overflow: ellipsis; }
+  .description h2 {
+    margin: 0; }
+  .description a {
+    color: #1d2441;
+    text-decoration: none; }
+  .description a:visited {
+    color: #3C4C88; }
+  .description a:hover, .description a:focus {
+    color: #3C4C88;
+    text-decoration: underline; }
+  .description .moz-link {
+    padding-left: 24px;
+    position: relative;
+    display: block;
+    background: url("moz.png") no-repeat left center;
+    word-break: break-word; }
+
+.element.group-health-1 {
+  background-color: #d48489; }
+  .element.group-health-1:hover {
+    background-color: #e1aaad; }
+
+.description.group-health-1 {
+  background-color: rgba(225, 170, 173, 0.5); }
+  .description.group-health-1:hover {
+    background-color: rgba(212, 132, 137, 0.8); }
+
+.key li.group-health-1:before {
+  background-color: #d48489; }
+
+.hover-group-health-1 .element {
+  opacity: .5; }
+
+.hover-group-health-1 .element.group-health-1 {
+  opacity: 1; }
+
+.element.group-metadata {
+  background-color: #d49384; }
+  .element.group-metadata:hover {
+    background-color: #e1b4aa; }
+
+.description.group-metadata {
+  background-color: rgba(225, 180, 170, 0.5); }
+  .description.group-metadata:hover {
+    background-color: rgba(212, 147, 132, 0.8); }
+
+.key li.group-metadata:before {
+  background-color: #d49384; }
+
+.hover-group-metadata .element {
+  opacity: .5; }
+
+.hover-group-metadata .element.group-metadata {
+  opacity: 1; }
+
+.element.group-health-2 {
+  background-color: #d4a784; }
+  .element.group-health-2:hover {
+    background-color: #e1c2aa; }
+
+.description.group-health-2 {
+  background-color: rgba(225, 194, 170, 0.5); }
+  .description.group-health-2:hover {
+    background-color: rgba(212, 167, 132, 0.8); }
+
+.key li.group-health-2:before {
+  background-color: #d4a784; }
+
+.hover-group-health-2 .element {
+  opacity: .5; }
+
+.hover-group-health-2 .element.group-health-2 {
+  opacity: 1; }
+
+.element.group-text-content {
+  background-color: #d4bb84; }
+  .element.group-text-content:hover {
+    background-color: #e1d0aa; }
+
+.description.group-text-content {
+  background-color: rgba(225, 208, 170, 0.5); }
+  .description.group-text-content:hover {
+    background-color: rgba(212, 187, 132, 0.8); }
+
+.key li.group-text-content:before {
+  background-color: #d4bb84; }
+
+.hover-group-text-content .element {
+  opacity: .5; }
+
+.hover-group-text-content .element.group-text-content {
+  opacity: 1; }
+
+.element.group-health-3 {
+  background-color: #d4cf84; }
+  .element.group-health-3:hover {
+    background-color: #e1deaa; }
+
+.description.group-health-3 {
+  background-color: rgba(225, 222, 170, 0.5); }
+  .description.group-health-3:hover {
+    background-color: rgba(212, 207, 132, 0.8); }
+
+.key li.group-health-3:before {
+  background-color: #d4cf84; }
+
+.hover-group-health-3 .element {
+  opacity: .5; }
+
+.hover-group-health-3 .element.group-health-3 {
+  opacity: 1; }
+
+.element.group-health-4 {
+  background-color: #c5d484; }
+  .element.group-health-4:hover {
+    background-color: #d7e1aa; }
+
+.description.group-health-4 {
+  background-color: rgba(215, 225, 170, 0.5); }
+  .description.group-health-4:hover {
+    background-color: rgba(197, 212, 132, 0.8); }
+
+.key li.group-health-4:before {
+  background-color: #c5d484; }
+
+.hover-group-health-4 .element {
+  opacity: .5; }
+
+.hover-group-health-4 .element.group-health-4 {
+  opacity: 1; }
+
+.element.group-embedded {
+  background-color: #b1d484; }
+  .element.group-embedded:hover {
+    background-color: #c9e1aa; }
+
+.description.group-embedded {
+  background-color: rgba(201, 225, 170, 0.5); }
+  .description.group-embedded:hover {
+    background-color: rgba(177, 212, 132, 0.8); }
+
+.key li.group-embedded:before {
+  background-color: #b1d484; }
+
+.hover-group-embedded .element {
+  opacity: .5; }
+
+.hover-group-embedded .element.group-embedded {
+  opacity: 1; }
+
+.element.group-script {
+  background-color: #9dd484; }
+  .element.group-script:hover {
+    background-color: #bbe1aa; }
+
+.description.group-script {
+  background-color: rgba(187, 225, 170, 0.5); }
+  .description.group-script:hover {
+    background-color: rgba(157, 212, 132, 0.8); }
+
+.key li.group-script:before {
+  background-color: #9dd484; }
+
+.hover-group-script .element {
+  opacity: .5; }
+
+.hover-group-script .element.group-script {
+  opacity: 1; }
+
+.element.group-health-5 {
+  background-color: #89d484; }
+  .element.group-health-5:hover {
+    background-color: #ade1aa; }
+
+.description.group-health-5 {
+  background-color: rgba(173, 225, 170, 0.5); }
+  .description.group-health-5:hover {
+    background-color: rgba(137, 212, 132, 0.8); }
+
+.key li.group-health-5:before {
+  background-color: #89d484; }
+
+.hover-group-health-5 .element {
+  opacity: .5; }
+
+.hover-group-health-5 .element.group-health-5 {
+  opacity: 1; }
+
+.element.group-table {
+  background-color: #84d493; }
+  .element.group-table:hover {
+    background-color: #aae1b4; }
+
+.description.group-table {
+  background-color: rgba(170, 225, 180, 0.5); }
+  .description.group-table:hover {
+    background-color: rgba(132, 212, 147, 0.8); }
+
+.key li.group-table:before {
+  background-color: #84d493; }
+
+.hover-group-table .element {
+  opacity: .5; }
+
+.hover-group-table .element.group-table {
+  opacity: 1; }
+
+.element.group-forms {
+  background-color: #84d4a7; }
+  .element.group-forms:hover {
+    background-color: #aae1c2; }
+
+.description.group-forms {
+  background-color: rgba(170, 225, 194, 0.5); }
+  .description.group-forms:hover {
+    background-color: rgba(132, 212, 167, 0.8); }
+
+.key li.group-forms:before {
+  background-color: #84d4a7; }
+
+.hover-group-forms .element {
+  opacity: .5; }
+
+.hover-group-forms .element.group-forms {
+  opacity: 1; }
+
+.element.group-interactive {
+  background-color: #84d4bb; }
+  .element.group-interactive:hover {
+    background-color: #aae1d0; }
+
+.description.group-interactive {
+  background-color: rgba(170, 225, 208, 0.5); }
+  .description.group-interactive:hover {
+    background-color: rgba(132, 212, 187, 0.8); }
+
+.key li.group-interactive:before {
+  background-color: #84d4bb; }
+
+.hover-group-interactive .element {
+  opacity: .5; }
+
+.hover-group-interactive .element.group-interactive {
+  opacity: 1; }
+
+.element.group-docter {
+  background-color: #84d4cf; }
+  .element.group-docter:hover {
+    background-color: #aae1de; }
+
+.description.group-docter {
+  background-color: rgba(170, 225, 222, 0.5); }
+  .description.group-docter:hover {
+    background-color: rgba(132, 212, 207, 0.8); }
+
+.key li.group-docter:before {
+  background-color: #84d4cf; }
+
+.hover-group-docter .element {
+  opacity: .5; }
+
+.hover-group-docter .element.group-docter {
+  opacity: 1; }
+</style>
+	</head>
+	<body>
+		<main>
+			<h1>TUM hospital: patient monitoring system</h1>
+			<div class="elements">
+	<div class="row">
+		<a href="#patient1" class="element group-health-1"><span>patient 1</span></a>
+		<a href="#patient3" class="element group-health-5"><span>patient 3</span></a>
+		<a href="#patient5" class="element group-health-3"><span>patient 5</span></a>
+		<a href="#patient7" class="element group-health-5"><span>patient 7</span></a>
+		<a href="#patient9" class="element group-health-1"><span>patient 9</span></a>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<a href="#patient21" class="element group-health-5"><span>patient 21</span></a>
+		<a href="#patient23" class="element group-health-5"><span>patient 23</span></a>
+		<a href="#patient25" class="element group-health-4"><span>patient 25</span></a>
+		<a href="#patient27" class="element group-health-4"><span>patient 27</span></a>
+		<a href="#patient29" class="element group-health-4"><span>patient 29</span></a>
+	</div>
+	<div class="row">
+		<a href="#patient2" class="element group-health-2"><span>patient 2</span></a>
+		<a href="#patient4" class="element group-health-4"><span>patient 4</span></a>
+		<a href="#patient6" class="element group-health-4"><span>patient 6</span></a>
+		<a href="#patient8" class="element group-health-5"><span>patient 8</span></a>
+		<a href="#patient10" class="element group-health-2"><span>patient 10</span></a>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<a href="#patient22" class="element group-health-5"><span>patient 22</span></a>
+		<a href="#patient24" class="element group-health-5"><span>patient 24</span></a>
+		<a href="#patient26" class="element group-health-4"><span>patient 26</span></a>
+		<a href="#patient28" class="element group-health-4"><span>patient 28</span></a>
+		<a href="#patient30" class="element group-health-4"><span>patient 30</span></a>
+	</div>
+	<div class="row">
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+	</div>
+	<div class="row">
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+	</div>
+	<div class="row">
+		<a href="#patient11" class="element group-health-1"><span>patient 11</span></a>
+		<a href="#patient13" class="element group-health-3"><span>patient 13</span></a>
+		<a href="#patient15" class="element group-health-3"><span>patient 15</span></a>
+		<a href="#patient17" class="element group-health-3"><span>patient 17</span></a>
+		<a href="#patient19" class="element group-health-2"><span>patient 19</span></a>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<a href="#patient31" class="element group-health-5"><span>patient 31</span></a>
+		<a href="#patient33" class="element group-health-5"><span>patient 33</span></a>
+		<a href="#patient35" class="element group-health-4"><span>patient 35</span></a>
+		<a href="#patient37" class="element group-health-4"><span>patient 37</span></a>
+		<a href="#patient39" class="element group-health-4"><span>patient 39</span></a>
+	</div>
+	<div class="row">
+		<a href="#patient12" class="element group-health-1"><span>patient 12</span></a>
+		<a href="#patient14" class="element group-health-3"><span>patient 14</span></a>
+		<a href="#patient16" class="element group-health-3"><span>patient 16</span></a>
+		<a href="#patient18" class="element group-health-2"><span>patient 18</span></a>
+		<a href="#patient20" class="element group-health-1"><span>patient 20</span></a>
+		<div class="element empty-element"></div>
+		<div class="element empty-element"></div>
+		<a href="#patient32" class="element group-health-2"><span>patient 32</span></a>
+		<a href="#patient34" class="element group-health-2"><span>patient 34</span></a>
+		<a href="#patient36" class="element group-health-4"><span>patient 36</span></a>
+		<a href="#patient38" class="element group-health-2"><span>patient 38</span></a>
+		<a href="#patient40" class="element group-health-5"><span>patient 40</span></a>
+	</div>
+</div>
+<div class="f-block elements">
+	<div class="row">
+        <div class="element empty-element"></div>
+        <div class="element empty-element"></div>
+        <div class="element empty-element"></div>
+	</div>
+	<div class="row">
+	  <a href="#docter1" class="element group-docter"><span>available docter 1</span></a>
+	  <a href="#docter2" class="element group-docter"><span>available docter 2</span></a>
+	  <a href="#nurse1" class="element group-docter"><span>available nurse 1</span></a>
+	</div>
+</div>
+
+<ul class="key">
+	<li class="group-health-1">health: 1/5</li>
+	<!--li class="group-metadata">metadata</li-->
+	<li class="group-health-2">health: 2/5</li>
+	<!--li class="group-text-content">text-content</li-->
+	<li class="group-health-3">health: 3/5</li-->
+	<li class="group-health-4">health: 4/5</li-->
+	<!--li class="group-embedded">embedded</li-->
+	<!--li class="group-script">script</li-->
+	<li class="group-health-5">health: 5/5</li>
+	<!--li class="group-table">table</li-->
+	<!--li class="group-forms">forms</li-->
+	<!--li class="group-interactive">interactive</li-->
+	<li class="group-docter">docters</li>
+</ul>
+
+<div class="descriptions">
+		  <div class="description group-health-1" id="patient1">
+				<h2>patient 1</h2>
+				<p>Records:</p>
+                 <ul>
+                  <li>Name:    &nbsp  &nbsp Karel Jansen</li>
+                  <li>Gender:  &nbsp M</li>
+                  <li>Age:     &nbsp &nbsp &nbsp &nbsp 43</li>
+                </ul> 
+				<p>Health condition: 1 / 5</p>
+				<p>Links:</p>
+				<p><a class="moz-link" href="device_4242.html">Open the monitoring system</a></p>
+				<p><a class="moz-link" href="https://www.tum.de/">Medical dossier</a></p>
+			</div>
+		  <div class="description group-health-2" id="patient2">
+				<h2>patient 2</h2>
+				<p>Records:</p>
+                 <ul>
+                  <li>Name:    &nbsp  &nbsp Maria Knecht</li>
+                  <li>Gender:  &nbsp F</li>
+                  <li>Age:     &nbsp &nbsp &nbsp &nbsp 27</li>
+                </ul> 
+				<p>Health condition: 2 / 5</p>
+				<p>Links:</p>
+				<p><a class="moz-link" href="device_3089.html">Open the monitoring system</a></p>
+				<p><a class="moz-link" href="https://www.tum.de/">Medical dossier</a></p>
+			</div>
+			<div class="description group-health-3" id="patient3">
+				<h2>patient 3</h2>
+				<p>Records:</p>
+                 <ul>
+                  <li>Name:    &nbsp  &nbsp Daniel Klein<li>
+                  <li>Gender:  &nbsp M</li>
+                  <li>Age:     &nbsp &nbsp &nbsp &nbsp 43</li>
+                </ul> 
+				<p>Health condition: 3 / 5</p>
+				<p>Links:</p>
+				<p><a class="moz-link" href="device_12693.html">Open the monitoring system</a></p>
+				<p><a class="moz-link" href="https://www.tum.de/">Medical dossier</a></p>
+			</div>
+			<div class="description group-health-4" id="patient4">
+				<h2>patient 4</h2>
+				<p>Records:</p>
+                 <ul>
+                  <li>Name:    &nbsp  &nbsp Dolers Smith</li>
+                  <li>Gender:  &nbsp F</li>
+                  <li>Age:     &nbsp &nbsp &nbsp &nbsp 43</li>
+                </ul> 
+				<p>Health condition: 3 / 5</p>
+				<p>Links:</p>
+				<p><a class="moz-link" href="device_93.html">Open the monitoring system</a></p>
+				<p><a class="moz-link" href="https://www.tum.de/">Medical dossier</a></p>
+			</div>
+				<div class="description group-health-5" id="patient5">
+				<h2>patient 5</h2>
+				<p>Records:</p>
+                 <ul>
+                  <li>Name:    &nbsp  &nbsp Bob Underwood</li>
+                  <li>Gender:  &nbsp F</li>
+                  <li>Age:     &nbsp &nbsp &nbsp &nbsp 43</li>
+                </ul> 
+				<p>Health condition: 3 / 5</p>
+				<p>Links:</p>
+				<p><a class="moz-link" href="device_586.html">Open the monitoring system</a></p>
+				<p><a class="moz-link" href="https://www.tum.de/">Medical dossier</a></p>
+			</div>
+		  <div class="description group-docter" id="docter1">
+				<h2>docter 1</h2>
+				<p>Records:</p>
+                 <ul>
+                  <li>Name:    &nbsp  &nbsp Sara Ganda</li>
+                  <li>Tel.: &nbsp   &nbsp  &nbsp  &nbsp 01704729493</li>
+                </ul> 
+				<p>Links:</p>
+				<p><a class="moz-link" href="https://www.tum.de/">Availability</a></p>
+				<p><a class="moz-link" href="https://www.tum.de/">Internal page</a></p>
+			</div>
+		  <div class="description group-docter" id="docter2">
+				<h2>docter 2</h2>
+				<p>Records:</p>
+                 <ul>
+                  <li>Name:    &nbsp  &nbsp Maarten Koch</li>
+                  <li>Tel.: &nbsp   &nbsp  &nbsp  &nbsp 017023842323</li>
+                </ul> 
+				<p>Links:</p>
+				<p><a class="moz-link" href="https://www.tum.de/">Availability</a></p>
+				<p><a class="moz-link" href="https://www.tum.de/">Internal page</a></p>
+			</div>
+		  <div class="description group-docter" id="nurse1">
+				<h2>nurse 1</h2>
+				<p>Records:</p>
+                 <ul>
+                  <li>Name:    &nbsp  &nbsp Theo Zunder</li>
+                  <li>Tel.: &nbsp   &nbsp  &nbsp  &nbsp 017395938483</li>
+                </ul> 
+				<p>Links:</p>
+				<p><a class="moz-link" href="https://www.tum.de/">Availability</a></p>
+				<p><a class="moz-link" href="https://www.tum.de/">Internal page</a></p>
+			</div>
+		  <div class="description group-docter" id="nurse2">
+				<h2>nurse 2</h2>
+				<p>Records:</p>
+                 <ul>
+                  <li>Name:    &nbsp  &nbsp Sander Tandea</li>
+                  <li>Tel.: &nbsp   &nbsp  &nbsp  &nbsp 017045345346</li>
+                </ul> 
+				<p>Links:</p>
+				<p><a class="moz-link" href="https://www.tum.de/">Availability</a></p>
+				<p><a class="moz-link" href="https://www.tum.de/">Internal page</a></p>
+			</div>
+		  <div class="description group-forms" id="output">
+				<h2><a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/output">&lt;output&gt;</a></h2>
+				<p>The HTML <code>&lt;output&gt;</code> element represents the result of a calculation or user action.</p>
+				<p><a class="moz-link" href="https://developer.mozilla.org/en/docs/Web/HTML/Element/output">https://developer.mozilla.org/en/docs/Web/HTML/Element/output</a></p>
+			</div>
+</div>
+
+		</main>
+		<script type="text/javascript">
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		if (document.location.hostname === "madebymike.com.au") {
+		  ga('create', 'UA-42027047-2', 'auto');
+		  ga('send', 'pageview');
+		}
+		Array.prototype.forEach.call(document.querySelectorAll('.key li'), function(li){
+			li.addEventListener('mouseenter', function(){
+				document.body.classList.add('hover-'+this.className);
+			});
+			li.addEventListener('mouseleave', function(){
+				document.body.classList.remove('hover-'+this.className);
+			});
+		});
+
+		</script>
+	</body>
+</html>

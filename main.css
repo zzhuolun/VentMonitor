@@ -1,0 +1,63 @@
+.chartcontainer{
+		position:relative;
+		max-width:800px;
+		height:200px;
+		border:solid;
+		border-color:pink;
+		}
+	.mychart{
+		position:absolute;
+		width:60%;
+		height:90%;
+		top:5%;
+		left:5%;
+		border:solid;
+		border-color:blue;
+		}
+	.number{
+		position:absolute;
+		width:20%;
+		height:50%;
+		top:25%;
+		right:5%;
+		border:solid;
+		border-color:green;
+		text-align:center;
+		vertical-align: middle;
+		line-height: 50%;   
+		}
+		.homebuttom{
+		position:absolute;
+		width:15%;
+		height:15%;
+		top:0;
+		right:0;
+		}
+		
+/*
+.chartcontainer{
+		position:relative;
+		max-width:800px;
+		height:200px;
+		border:solid;
+		border-color:pink;
+		}
+	.mychart{
+		position:absolute;
+		width:600px;
+		height:150px;
+		top:10px;
+		left:10px;
+		border:solid;
+		border-color:blue;
+		}
+	.number{
+		position:absolute;
+		max-width:100px;
+		height:100px;
+		top:50px;
+		right:10px;
+		border:solid;
+		border-color:green;
+		}
+*/

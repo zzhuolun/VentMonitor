@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Legend Positions</title>
+	<link rel="stylesheet" href="main.css">
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<!--
+	<script src="/home/joeller/node_modules/chart.js/dist/Chart.js"></script>
+-->
+	<script src="javascripts/d3.v3.min.js" charset="utf-8"></script>
+	<script src="javascripts/c3.min.js"></script>
+	<!-- Load papaparse.js -->
+	<script src="javascripts/papaparse.min.js"></script>
+	<script src="utils.js"></script>
+	</head>
+	
+<body>
+
+<div class="chartcontainer">
+	<!--expired CO2 -->
+	<div class="mychart">
+		<canvas id="myChart" ></canvas>
+	</div>
+    <div class="number">
+		<p  id="CO2" style="font-size:50px"></p>
+	</div>
+	<button class="homebuttom" type="button" onclick= "window.location.href = 'index.html';">Patient Overview</button>
+</div>	
+
+	<!-- frequency -->
+<!--
+<div class="chartcontainer">
+	<div class="mychart">
+		<canvas id="myChart1" ></canvas>
+	</div>
+    <div class="number">
+		<p  id="frequency" style="font-size:50px"></p>
+	</div>
+</div>	
+-->
+<!-- mve -->
+        <div class="chartcontainer">
+            <div class="mychart">
+                <canvas id="myChart1" ></canvas>
+            </div>
+            <div class="number">
+                <p  id="mve" style="font-size:50px"></p>
+            </div>
+        </div>
+	<!-- pressure -->
+<div class="chartcontainer">
+	<div class="mychart">
+		<canvas id="myChart2" ></canvas>
+	</div>
+    <div class="number">
+		<p  id="pressure" style="font-size:50px"></p>
+	</div>
+</div>
+
+<script src="plot_12693.js"></script>
+</body>
+</html> 

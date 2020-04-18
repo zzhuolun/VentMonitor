@@ -1,0 +1,16 @@
+{
+  "name": "html-periodic-table",
+  "version": "0.0.0",
+  "description": "A just for fun periodic table of HTML elements",
+  "scripts": {
+    "start": "npm run build",
+    "build": "node ./index.js"
+  },
+  "author": "Mike Riethmuller",
+  "license": "none",
+  "dependencies": {
+    "handlebars": "^4.0.5",
+    "node-sass": "^3.4.2",
+    "periodic-layout": "0.0.1"
+  }
+}
