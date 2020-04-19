@@ -90,7 +90,7 @@ function createGraph(data) {
 	//console.log(Number(time_latest));
     
     var ExpiredCO2_new = [];
-	for (var i = 1; i <= 5; i++) {
+	for (var i = 1; i <= 7; i++) {
 
         let unix_timestamp = Number(time_latest) + i;
         var date = new Date(unix_timestamp * 1000);
@@ -106,6 +106,11 @@ function createGraph(data) {
         pressure.push(null);
 
         time.push(formattedTime);
+        ExpiredCO2_PREDICT.push(Number(data[index_latest-i][2]));
+        ExpiredO2_PREDICT.push (Number(data[index_latest-i][3]));
+        mve_PREDICT.push       (Number(data[index_latest-i][4]));
+        pressure_PREDICT.push  (Number(data[index_latest-i][7]));
+        /*
         if (i==1){
             ExpiredCO2_PREDICT.push(Number(data[index_latest-0][2]) + Number(data[index_latest-0][2]) - Number(data[index_latest-1][2]));
             ExpiredO2_PREDICT.push (Number(data[index_latest-0][3]) + Number(data[index_latest-0][3]) - Number(data[index_latest-1][3]));
@@ -130,11 +135,15 @@ function createGraph(data) {
             mve_PREDICT.push       (Number(mve_PREDICT[mve_PREDICT.length - 1])*0.5               + Number(mve_PREDICT[mve_PREDICT.length - 2])*0.25               + Number(mve_PREDICT[mve_PREDICT.length - 3])*0.25);
             pressure_PREDICT.push  (Number(pressure_PREDICT[pressure_PREDICT.length - 1])*0.5     + Number(pressure_PREDICT[pressure_PREDICT.length - 2])*0.25     + Number(pressure_PREDICT[pressure_PREDICT.length - 3])*0.25);
         }
+        */
 	}
     //console.log(Number(index_latest)-2);
 	document.getElementById('CO2').innerHTML = data[index_latest][2];
+    document.getElementById('CO2').innerHTML = data[index_latest][2];
 	document.getElementById('mve').innerHTML = data[index_latest][4];
 	document.getElementById('pressure').innerHTML = data[index_latest][7];
+	document.getElementById('modeval').innerHTML = data[index_latest][8];
+
 	// console.log(ExpiredO2[data.length-2]);
 
 	// CO2 and O2
