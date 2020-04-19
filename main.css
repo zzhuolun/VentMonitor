@@ -1,13 +1,12 @@
 .showid{
 position:relative;
 left:370px;
-width:200px;
+width:300px;
 height:50px;
-border:solid;
 }
 .chartcontainer{
 		position:relative;
-		max-width:800px;
+		max-width:1100px;
 		height:200px;
 		border:solid;
 		border-color:pink;
@@ -27,8 +26,6 @@ border:solid;
 		height:50%;
 		top:25%;
 		right:5%;
-		border:solid;
-		border-color:green;
 		text-align:center;
 		vertical-align: middle;
 		line-height: 50%;   
@@ -39,8 +36,6 @@ border:solid;
 		height:15%;
 		top:80%;
 		right:5%;
-		border:solid;
-		border-color:blue;
 		text-align:center;
 		vertical-align: middle;
 		line-height: 50%;   
@@ -48,7 +43,7 @@ border:solid;
 		.homebuttom{
 		position:absolute;
 		width:15%;
-		height:15%;
+		height:20%;
 		top:0;
 		right:0;
 		}

@@ -138,11 +138,10 @@ function createGraph(data) {
         */
 	}
     //console.log(Number(index_latest)-2);
-	document.getElementById('CO2').innerHTML = data[index_latest][2];
-    document.getElementById('CO2').innerHTML = data[index_latest][2];
+	document.getElementById('CO2').innerHTML = data[index_latest][2] + '/' +data[index_latest][3]  ;
 	document.getElementById('mve').innerHTML = data[index_latest][4];
 	document.getElementById('pressure').innerHTML = data[index_latest][7];
-	document.getElementById('modeval').innerHTML = data[index_latest][8];
+	//document.getElementById('modeval').innerHTML = data[index_latest][8];
 
 	// console.log(ExpiredO2[data.length-2]);
 
