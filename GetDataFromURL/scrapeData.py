@@ -6,7 +6,7 @@ import time
 
 ### VARIABLES
 url_page = "https://api.theopenvent.com/exampledata/v2/data"
-timedelay = 1
+timedelay = 3
 
 ### FUNCTIONS
 def append_list_as_row(file_name, list_of_elem):
