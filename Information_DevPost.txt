@@ -1,0 +1,35 @@
+
+Inspiration
+
+Increase efficiency and alertness of docters and nurses on the IC.
+What it does
+
+    Provide an overview of the status of the patients for the docters and nurses
+    Observe the data of each ventilation system online.
+    Provide allerts to the docters and nurses if a situation changes.
+
+How we built it
+
+    retrieve data from the API and store it in a storage
+    retrieve data from the storage and display it on an HTML with JS
+    create predictions for each patients that can then trigger alarms
+
+Challenges we ran into
+
+    creating a website that is linked with other websites
+    simulation of data
+
+Accomplishments that we're proud of
+
+    creating the webpages
+
+What we learned
+
+    retrieve data from a datastorage and display it in an HTML file
+
+What's next for VentMonitor
+
+    improve the prediction based on RNN/LSTM neural network
+    creating alerts on the overview HTML
+    creating buttons on the patient HMTL where the docter can decide which values he want to be alerted for, and which upper/lower bounds he wants to have for each patient
+
