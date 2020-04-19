@@ -33,12 +33,31 @@ border:solid;
 		vertical-align: middle;
 		line-height: 50%;   
 		}
+	.mode{
+		position:absolute;
+		width:20%;
+		height:15%;
+		top:80%;
+		right:5%;
+		border:solid;
+		border-color:blue;
+		text-align:center;
+		vertical-align: middle;
+		line-height: 50%;   
+		}
 		.homebuttom{
 		position:absolute;
 		width:15%;
 		height:15%;
 		top:0;
 		right:0;
+		}
+		.togglemonitoring{
+		position:absolute;
+		width:15%;
+		height:20s%;
+		top:0%;
+		left:70%;
 		}
 		
 /*
